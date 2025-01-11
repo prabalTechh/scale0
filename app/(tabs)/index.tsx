@@ -1,17 +1,20 @@
-import { Image, StyleSheet, Platform, View, Text } from "react-native";
+import { StyleSheet } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
-import Navbar from "../components/Navbar";
+import Navbar from "../../components/Navbar";
 
 export default function HomeScreen() {
   return (
     <SafeAreaProvider>
-      <SafeAreaView>
-       <Navbar />
+      <SafeAreaView style={styles.container}>
+        <Navbar />
       </SafeAreaView>
     </SafeAreaProvider>
   );
 }
 
-const style = StyleSheet.create({
- 
-})
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+  },
+});
